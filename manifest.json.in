@@ -1,0 +1,15 @@
+{
+    "name": "unitconverter.fulvio",
+    "description": "A simple offline unit of measure converter",
+    "architecture": "@CLICK_ARCH@",
+    "title": "unitConverter",
+    "hooks": {
+        "unitConverter": {
+            "apparmor": "unitConverter/unitConverter.apparmor",
+            "desktop": "unitConverter/unitConverter.desktop"
+        }
+    },
+    "version": "1.2",
+    "maintainer": "fulvio <fulvio999@gmail.com>",
+    "framework": "ubuntu-sdk-15.04-qml"
+}
