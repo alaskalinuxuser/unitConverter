@@ -129,6 +129,12 @@ MainView {
        PressurePage{}
     }
 
+    /* Loader used to dinamically load the right page content (tablet or phone) accordign with page size */
+     Loader {
+        id: pageLoader
+        anchors.fill: parent
+    }
+
     PageStack {
         id: pageStack
 
@@ -201,7 +207,7 @@ MainView {
                             anchors.verticalCenter: lengthImage.bottom
                         }
 
-                        onClicked: {                           
+                        onClicked: {
                             pageStack.push(lengthPage)
                         }
                     }
