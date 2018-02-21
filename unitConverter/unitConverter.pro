@@ -43,4 +43,10 @@ DISTFILES += \
     LengthPage.qml \
     AreaPage.qml \
     InvalidInputPopUp.qml \
-    ProductInfoDialogue.qml
+    ProductInfoDialogue.qml \
+    LengthPagePhone.qml \
+    AreaPagePhone.qml \
+    PressurePagePhone.qml \
+    TemperaturePagePhone.qml \
+    VolumePagePhone.qml \
+    WeigthPagePhone.qml

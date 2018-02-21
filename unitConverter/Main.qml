@@ -20,7 +20,7 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "unitconverter.fulvio"
 
-    property string appVersion : "1.2"
+    property string appVersion : "1.3"
 
     width: units.gu(100)
     height: units.gu(75)
@@ -186,6 +186,7 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id: lengthImage
                             source: "length.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
@@ -194,11 +195,10 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                            
                             text: i18n.tr("Length");
                             anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: lengthImage.bottom
                         }
 
                         onClicked: {                           
@@ -216,6 +216,7 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id: areaImage
                             source: "area.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
@@ -224,11 +225,10 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                           
                             text: i18n.tr("Area");
                             anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: areaImage.bottom
                         }
 
                         onClicked: {                           
@@ -246,19 +246,19 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id: volumeImage
                             source: "volume.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
-                            height: parent.height * 0.5
+                            height: parent.height * 0.8
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                            
                             text: i18n.tr("Volume");
                             anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: volumeImage.bottom
                         }
 
                         onClicked: {                            
@@ -276,6 +276,7 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id: weightImage
                             source: "weight.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
@@ -284,11 +285,10 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                            
                             text: i18n.tr("Weigth");
                             anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: weightImage.bottom
                         }
 
                         onClicked: {                           
@@ -306,19 +306,19 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id: temperatureImage
                             source: "temperature.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
-                            height: parent.height * 0.6
+                            height: parent.height * 0.8
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                           
                             text: i18n.tr("Temperature");
                             anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: temperatureImage.bottom
                         }
 
                         onClicked: {
@@ -339,19 +339,19 @@ MainView {
                         anchors.fill: parent;
 
                         Image {
+                            id:pressureImage
                             source: "pressure.png"
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
-                            height: parent.height * 0.6
+                            height: parent.height * 0.8
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {
-                            x: parent.width/3
-                            y: parent.height - units.gu(5)
+                        Text {                           
                             text: i18n.tr("pressure");
-                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.horizontalCenter: parent.horizontalCenter                           
+                            anchors.verticalCenter: pressureImage.bottom
                         }
 
                         onClicked: {                           
