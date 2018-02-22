@@ -17,25 +17,8 @@ Page {
      id: volumePagePhone
      visible: false
 
-     /* default is today, after is updated when the user chose a date with the TimePicker */
-     property string targetDate : Qt.formatDateTime(new Date(), "yyyy-MM-dd");
-
      header: PageHeader {
-        title: i18n.tr("Volume conversions PH")
-
-        leadingActionBar.actions: [
-            Action {
-                iconName: "back"
-                text: "Back"
-
-                onTriggered:{
-                    pageStack.clear();
-                    pageStack.push(mainPage);
-                    /* otherwise there is an overlap of jobList and jobDetails Pages */
-                    pageLoader.source = "";
-                }
-            }
-        ]
+        title: i18n.tr("Volume conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -44,7 +27,7 @@ Page {
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
-     /* ------------- Source Unit --------------- */
+     /* ------------- Source Unit Chooser --------------- */
      Component {
          id: sourceVolumeUnitsChooserComponent
 
@@ -86,8 +69,7 @@ Page {
          }
      }
 
-
-     /* ------------- Destination Unit --------------- */
+     /* ------------- Destination Unit Chooser --------------- */
      Component {
          id: destinationVolumeUnitsChooserComponent
 
@@ -144,18 +126,29 @@ Page {
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(2)
+            spacing:units.gu(1)
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
+                anchors.verticalCenter: valueToConvertField.verticalCenter
                 text: i18n.tr("From:")
             }
 
             TextField{
                 id: valueToConvertField
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:true
+            }
+        }
+
+        Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(1)
+
+            Rectangle {
+                color: "transparent"
+                width: sourceUnitLabel.width
+                height: units.gu(1)
             }
 
             Button{
@@ -170,7 +163,15 @@ Page {
             }
         }
 
-        /* ------------------ Destination Unit ------------------ */
+        /* line separator */
+        Rectangle {
+              color: "grey"
+              width: parent.width
+              anchors.horizontalCenter: parent.horizontalCenter
+              height: units.gu(0.1)
+        }
+
+        /* ------------------ Destination Unit row ------------------ */
         Row{
             id: destinationUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
@@ -180,14 +181,7 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }
-
-            /* transparent placeholder: required to place the content under the header */
-            Rectangle {
-                 color: "transparent"
-                 width: valueToConvertField.width
-                 height: units.gu(6)
-            }
+            }         
 
             Button{
                 id: destinationUnitChooserButton
@@ -208,7 +202,7 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing:units.gu(3)
 
-            /* transparent placeholder: required to place the content under the header */
+            /* transparent placeholder */
             Rectangle {
                  color: "transparent"
                  width: destinationUnitLabel.width
@@ -217,8 +211,20 @@ Page {
 
             TextField{
                 id: convertedValue
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:false
+            }
+        }
+
+        Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(3)
+
+            /* transparent placeholder */
+            Rectangle {
+                 color: "transparent"
+                 width: destinationUnitLabel.width
+                 height: units.gu(6)
             }
 
             Button{

@@ -17,25 +17,8 @@ Page {
      id: areaPage
      visible: false
 
-     /* default is today, after is updated when the user chose a date with the TimePicker */
-     property string targetDate : Qt.formatDateTime(new Date(), "yyyy-MM-dd");
-
      header: PageHeader {
-        title: i18n.tr("Area conversions")
-
-        leadingActionBar.actions: [
-            Action {
-                iconName: "back"
-                text: "Back"
-
-                onTriggered:{
-                    pageStack.clear();
-                    pageStack.push(mainPage);
-                    /* otherwise there is an overlap of jobList and jobDetails Pages */
-                    pageLoader.source = "";
-                }
-            }
-        ]
+        title: i18n.tr("Area conversions")       
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -44,7 +27,7 @@ Page {
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
-     /* ------------- Source Unit --------------- */
+     /* ------------- Source Unit Chooser --------------- */
      Component {
          id: sourceAreaUnitsChooserComponent
 
@@ -87,7 +70,7 @@ Page {
      }
 
 
-     /* ------------- Destination Unit --------------- */
+     /* ------------- Destination Unit Chooser --------------- */
      Component {
          id: destinationAreaUnitsChooserComponent
 
@@ -128,6 +111,7 @@ Page {
              }
          }
      }
+     //-------------------------------------------------------
 
      Column{
         id: areaPageColumn
@@ -170,7 +154,7 @@ Page {
             }
         }
 
-        /* ------------------ Destination Unit ------------------ */
+        /* ------------------ Destination Unit row------------------ */
         Row{
             id: destinationUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
@@ -236,7 +220,6 @@ Page {
                     }
                 }
             }
-
         }
 
         Row{

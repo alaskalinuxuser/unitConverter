@@ -738,7 +738,7 @@
         if(sourceUnit === destinationUnit)
             return valueToConvert;
 
-        console.log("Converting Temperature value: "+valueToConvert+" from sourceUnit: "+sourceUnit +" to destinationUnit: "+destinationUnit);
+        //console.log("Converting Temperature value: "+valueToConvert+" from sourceUnit: "+sourceUnit +" to destinationUnit: "+destinationUnit);
 
         if(sourceUnit === 'Fahrenheit' && destinationUnit === 'Celsius' ){
             return convertFromFahrenheitToCelsius (valueToConvert);
@@ -748,7 +748,6 @@
             return convertFromCelsiusToFahrenheit (valueToConvert);
         }
 
-
         if(sourceUnit === 'Celsius' && destinationUnit === 'Kelvin' ){
             return convertFromCelsiusToKelvin (valueToConvert);
         }
@@ -756,8 +755,6 @@
         if(sourceUnit === 'Kelvin' && destinationUnit === 'Celsius' ){
             return  convertFromKelvinToCelsius(valueToConvert);
         }
-
-
 
         if(sourceUnit === 'Fahrenheit' && destinationUnit === 'Kelvin' ){
             return  convertFromFahrenheitToKelvin(valueToConvert);
@@ -811,7 +808,7 @@
     }
 
     function convertFromKelvinToFahrenheit(valueToConvert){
-        console.log("K --> F ");
+        //console.log("Conversion K --> F ");
 
         var tempF = (Number(valueToConvert) * (9 / 5)) - Number(459.67);
         return parseFloat(tempF).toFixed(4);
