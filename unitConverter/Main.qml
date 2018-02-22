@@ -22,7 +22,7 @@ MainView {
 
     property string appVersion : "1.3"
 
-    width: units.gu(50)
+    width: units.gu(100)
     height: units.gu(75)
 
     Settings {

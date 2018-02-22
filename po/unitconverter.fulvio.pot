@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-22 15:59+0100\n"
+"POT-Creation-Date: 2018-02-22 16:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,177 +17,177 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:24
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:21
 msgid "Area conversions"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:82
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:39
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:82
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:78
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:78
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:79
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:36
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:79
 msgid "Found "
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:96
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:93
 #: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/InvalidInputPopUp.qml:20
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:96
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:53
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:96
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:92
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:92
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:93
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:50
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:93
 msgid "Close"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:104
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:61
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:104
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:100
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:100
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:101
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:58
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:101
 msgid "Select"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:140
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:139
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:139
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:138
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:138
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:136
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:136
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:136
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:134
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:135
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:135
 msgid "From:"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:152
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:184
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:163
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:196
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:152
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:184
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:166
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:199
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:153
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:185
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:164
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:197
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:152
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:184
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:163
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:197
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:152
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:184
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:163
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:196
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:152
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:184
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:163
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:196
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:150
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:182
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:160
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:193
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:149
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:181
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:162
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:195
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:149
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:181
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:161
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:194
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:149
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:181
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:160
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:194
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:149
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:181
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:159
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:192
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:149
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:181
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:160
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:193
 msgid "Choose..."
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:168
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:187
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:168
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:190
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:169
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:188
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:168
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:188
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:168
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:187
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:168
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:187
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:166
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:184
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:165
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:186
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:165
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:185
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:165
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:185
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:165
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:183
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:165
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:184
 msgid "To:"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:214
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:238
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:214
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:241
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:215
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:239
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:214
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:239
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:214
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:238
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:214
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:238
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:212
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:235
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:211
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:237
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:211
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:236
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:211
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:236
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:211
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:234
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:211
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:235
 msgid "Convert"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:234
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:257
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:233
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:260
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:234
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:258
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:233
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:258
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:233
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:257
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:233
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:257
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:231
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:254
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:230
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:256
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:230
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:255
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:230
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:255
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:230
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:253
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:230
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:254
 msgid "Note: the decimal separtor in use is '.'"
 msgstr ""
 
@@ -199,12 +199,9 @@ msgstr ""
 msgid "Attention: "
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:21
 msgid "Length conversions"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:24
-msgid "Length conversions PH"
 msgstr ""
 
 #: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:187
@@ -235,40 +232,28 @@ msgstr ""
 msgid "pressure"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:21
 msgid "Pressure conversions"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:24
-msgid "Pressure conversions PH"
 msgstr ""
 
 #: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/ProductInfoDialogue.qml:9
 msgid "Product Info"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:21
 msgid "Temperature conversions"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:24
-msgid "Temperature conversions PH"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:21
 msgid "Volume conversions"
 msgstr ""
 
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:24
-msgid "Volume conversions PH"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:24
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:21
+#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:21
 msgid "Weigth conversions"
-msgstr ""
-
-#: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:24
-msgid "Weigth conversions PH"
 msgstr ""
 
 #: /media/sf_ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Utility.js:121
