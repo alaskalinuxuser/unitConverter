@@ -128,11 +128,7 @@ Page {
              }
          }
      }
-
-
-//     onVisibleChanged: {
-//          pageLoader.source = (root.width > units.gu(80)) ? "LengthPageContentTablet.qml" : "LengthPageContentPhone.qml"
-//     }
+     //------------------------------------------
 
      Column{
         id: lengthPageColumn
@@ -153,7 +149,7 @@ Page {
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
+                //anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
                 text: i18n.tr("From:")
             }
 
@@ -162,10 +158,24 @@ Page {
                 width: units.gu(20)
                 enabled:true
             }
+        }
+
+
+        /* line separator */
+           Rectangle {
+                color: "grey"
+                width: parent.width
+                anchors.horizontalCenter: parent.horizontalCenter
+                height: units.gu(0.1)
+           }
+
+        Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(2)
 
             Button{
                 id: sourceUnitChooserButton
-                width: units.gu(25)
+                width: units.gu(20)
                 color: UbuntuColors.warmGrey
                 iconName: "find"
                 text: i18n.tr("Choose...")
@@ -253,12 +263,7 @@ Page {
             }
         }
 
-
      }
-
-
-
-
 }
 
 
