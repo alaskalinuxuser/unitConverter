@@ -22,7 +22,7 @@ MainView {
 
     property string appVersion : "1.3"
 
-    width: units.gu(100)
+    width: units.gu(50)
     height: units.gu(75)
 
     Settings {
@@ -99,10 +99,44 @@ MainView {
        InvalidInputPopUp{msg: "Invaid Input"}
     }
 
+    //------- Pages for Phone -----------
+    Component {
+       id: lengthPagePhone
+       LengthPagePhone{}
+    }
+
+    Component {
+       id: areaPagePhone
+       AreaPagePhone{}
+    }
+
+    Component {
+       id: volumePagePhone
+       VolumePagePhone{}
+    }
+
+    Component {
+       id: weigthPagePhone
+       WeigthPagePhone{}
+    }
+
+    Component {
+       id: temperaturePagePhone
+       TemperaturePagePhone{}
+    }
+
+    Component {
+       id: pressurePagePhone
+       PressurePagePhone{}
+    }
+    //------------------------------------
+
+
+    //------- Pages for Tablet -----------
     Component {
        id: lengthPage
        LengthPage{}
-    }
+    }   
 
     Component {
        id: areaPage
@@ -128,12 +162,8 @@ MainView {
        id: pressurePage
        PressurePage{}
     }
+    //---------------------------------
 
-    /* Loader used to dinamically load the right page content (tablet or phone) accordign with page size */
-     Loader {
-        id: pageLoader
-        anchors.fill: parent
-    }
 
     PageStack {
         id: pageStack
@@ -208,7 +238,11 @@ MainView {
                         }
 
                         onClicked: {
-                            pageStack.push(lengthPage)
+                            if (root.width > units.gu(80)){
+                                pageStack.push(lengthPage)
+                            }else {
+                               pageStack.push(lengthPagePhone)
+                            }
                         }
                     }
                 }
@@ -237,8 +271,12 @@ MainView {
                             anchors.verticalCenter: areaImage.bottom
                         }
 
-                        onClicked: {                           
-                            pageStack.push(areaPage)
+                        onClicked: {
+                            if (root.width > units.gu(80)){
+                                pageStack.push(areaPage)
+                            }else {
+                               pageStack.push(areaPagePhone)
+                            }
                         }
                     }
                 }
@@ -267,8 +305,12 @@ MainView {
                             anchors.verticalCenter: volumeImage.bottom
                         }
 
-                        onClicked: {                            
-                            pageStack.push(volumePage)
+                        onClicked: {
+                            if (root.width > units.gu(80)){
+                                pageStack.push(volumePage)
+                            }else {
+                               pageStack.push(volumePagePhone)
+                            }
                         }
                     }
                 }
@@ -297,8 +339,13 @@ MainView {
                             anchors.verticalCenter: weightImage.bottom
                         }
 
-                        onClicked: {                           
-                            pageStack.push(weigthPage)
+                        onClicked: {
+
+                            if(root.width > units.gu(80)) {
+                                pageStack.push(weigthPage)
+                            }else {
+                               pageStack.push(weigthPagePhone)
+                            }
                         }
                     }
                 }
@@ -328,8 +375,12 @@ MainView {
                         }
 
                         onClicked: {
-                            console.log("click temperature")
-                            pageStack.push(temperaturePage)
+
+                            if(root.width > units.gu(80)) {
+                                pageStack.push(temperaturePage)
+                            }else {
+                               pageStack.push(temperaturePagePhone)
+                            }
                         }
                     }
                 }
@@ -360,8 +411,13 @@ MainView {
                             anchors.verticalCenter: pressureImage.bottom
                         }
 
-                        onClicked: {                           
-                            pageStack.push(pressurePage)
+                        onClicked: {
+
+                            if(root.width > units.gu(80)) {
+                                pageStack.push(pressurePage)
+                            }else {
+                               pageStack.push(pressurePagePhone)
+                            }
                         }
                     }
                 }

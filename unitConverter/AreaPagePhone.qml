@@ -10,18 +10,18 @@ import "Storage.js"  as Storage
 import "Utility.js" as Utility
 
 /*
-  Temperature unit converter page
+  Area unit converter page for Phone
 */
 
 Page {
-     id: temperaturePage
+     id: areaPagePhone
      visible: false
 
      /* default is today, after is updated when the user chose a date with the TimePicker */
      property string targetDate : Qt.formatDateTime(new Date(), "yyyy-MM-dd");
 
      header: PageHeader {
-        title: i18n.tr("Temperature conversions")
+        title: i18n.tr("Area conversions PH")
 
         leadingActionBar.actions: [
             Action {
@@ -40,24 +40,24 @@ Page {
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: temperatureUnitsListModelDelegate
+         id: areaUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit --------------- */
      Component {
-         id: sourceTemperatureUnitsChooserComponent
+         id: sourceAreaUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             id: areaUnitsChooserDialog
+             title: i18n.tr("Found "+areaUnitsListModel.count+ "area units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: areaUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: areaUnitsListModelDelegate
+                 model: areaUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -67,7 +67,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
 
@@ -75,11 +75,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
              }
@@ -89,18 +89,18 @@ Page {
 
      /* ------------- Destination Unit --------------- */
      Component {
-         id: destinationTemperatureUnitsChooserComponent
+         id: destinationAreaUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             id: areaUnitsChooserDialog
+             title: i18n.tr("Found "+areaUnitsListModel.count+ " area units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: areaUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: areaUnitsListModelDelegate
+                 model: areaUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -110,7 +110,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
 
@@ -118,19 +118,19 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
              }
          }
-    }
+     }
 
      Column{
-        id: temperaturePageColumn
+        id: areaPageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -165,7 +165,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceTemperatureUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourceAreaUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
         }
@@ -197,7 +197,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationTemperatureUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationAreaUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -231,7 +231,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertTemperature(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertArea(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -249,6 +249,5 @@ Page {
         }
 
      }
-
 
 }

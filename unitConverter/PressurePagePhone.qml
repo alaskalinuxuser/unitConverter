@@ -2,26 +2,26 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
-
 import Ubuntu.Components.ListItems 1.3 as ListItem
+
 import QtQuick.LocalStorage 2.0
 
 import "Storage.js"  as Storage
 import "Utility.js" as Utility
 
 /*
-  Temperature unit converter page
+  Pressure unit converter page for Phone
 */
 
 Page {
-     id: temperaturePage
+     id: pressurePagePhone
      visible: false
 
      /* default is today, after is updated when the user chose a date with the TimePicker */
      property string targetDate : Qt.formatDateTime(new Date(), "yyyy-MM-dd");
 
      header: PageHeader {
-        title: i18n.tr("Temperature conversions")
+        title: i18n.tr("Pressure conversions PH")
 
         leadingActionBar.actions: [
             Action {
@@ -40,24 +40,24 @@ Page {
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: temperatureUnitsListModelDelegate
+         id: pressureUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit --------------- */
      Component {
-         id: sourceTemperatureUnitsChooserComponent
+         id: sourcePressureUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             id: pressureUnitsChooserDialog
+             title: i18n.tr("Found "+pressureUnitsListModel.count+ " pressure units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: pressureUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: pressureUnitsListModelDelegate
+                 model: pressureUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -67,7 +67,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(pressureUnitsChooserDialog)
                      }
                  }
 
@@ -75,11 +75,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = pressureUnitsListModel.get(pressureUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(pressureUnitsChooserDialog)
                      }
                  }
              }
@@ -89,18 +89,18 @@ Page {
 
      /* ------------- Destination Unit --------------- */
      Component {
-         id: destinationTemperatureUnitsChooserComponent
+         id: destinationPressureUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             id: pressureUnitsChooserDialog
+             title: i18n.tr("Found "+pressureUnitsListModel.count+ " pressure units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: pressureUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: pressureUnitsListModelDelegate
+                 model: pressureUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -110,7 +110,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(pressureUnitsChooserDialog)
                      }
                  }
 
@@ -118,19 +118,20 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = pressureUnitsListModel.get(pressureUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(pressureUnitsChooserDialog)
                      }
                  }
              }
          }
-    }
+     }
+
 
      Column{
-        id: temperaturePageColumn
+        id: pressurePageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -165,7 +166,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceTemperatureUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourcePressureUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
         }
@@ -197,7 +198,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationTemperatureUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationPressureUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -231,7 +232,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertTemperature(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertPressure(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -247,7 +248,6 @@ Page {
                 text: i18n.tr("Note: the decimal separtor in use is '.'")
             }
         }
-
      }
 
 

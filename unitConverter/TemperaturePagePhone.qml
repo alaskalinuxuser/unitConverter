@@ -10,18 +10,18 @@ import "Storage.js"  as Storage
 import "Utility.js" as Utility
 
 /*
-  Temperature unit converter page
+  Temperature unit converter page for Phone
 */
 
 Page {
-     id: temperaturePage
+     id: temperaturePagePhone
      visible: false
 
      /* default is today, after is updated when the user chose a date with the TimePicker */
      property string targetDate : Qt.formatDateTime(new Date(), "yyyy-MM-dd");
 
      header: PageHeader {
-        title: i18n.tr("Temperature conversions")
+        title: i18n.tr("Temperature conversions PH")
 
         leadingActionBar.actions: [
             Action {

@@ -44,15 +44,9 @@ DISTFILES += \
     AreaPage.qml \
     InvalidInputPopUp.qml \
     ProductInfoDialogue.qml \
-    LengthPageContentTablet.qml \
-    LengthPageContentPhone.qml \
-    PressurePageContentPhone.qml \
-    PressurePageContentTablet.qml \
-    TemperaturePageContentPhone.qml \
-    TemperaturePageContentTablet.qml \
-    VolumePageContentPhone.qml \
-    VolumePageContentTablet.qml \
-    WeigthPageContentPhone.qml \
-    WeigthPageContentTablet.qml \
-    AreaPageContentPhone.qml \
-    AreaPageContentTablet.qml
+    AreaPagePhone.qml \
+    LengthPagePhone.qml \
+    PressurePagePhone.qml \
+    TemperaturePagePhone.qml \
+    VolumePagePhone.qml \
+    WeigthPagePhone.qml
