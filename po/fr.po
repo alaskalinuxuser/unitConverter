@@ -117,7 +117,7 @@ msgstr "Sélectionner"
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPage.qml:135
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPagePhone.qml:135
 msgid "From:"
-msgstr "À partir de :"
+msgstr "À partir de:"
 
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/AreaPage.qml:150
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/AreaPage.qml:182
@@ -159,7 +159,7 @@ msgstr "Choisir..."
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPage.qml:165
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPagePhone.qml:184
 msgid "To:"
-msgstr "En :"
+msgstr "En:"
 
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/AreaPage.qml:212
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/AreaPagePhone.qml:235
@@ -249,7 +249,7 @@ msgstr "Conversions de températures"
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/VolumePage.qml:21
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/VolumePagePhone.qml:21
 msgid "Volume conversions"
-msgstr "COnversions de volumes"
+msgstr "Conversions de volumes"
 
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPage.qml:21
 #: /home/cibersheep/Escriptori/esborra/unitConverter/unitConverter/WeigthPagePhone.qml:21
