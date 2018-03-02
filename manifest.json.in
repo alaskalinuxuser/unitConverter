@@ -1,7 +1,7 @@
 {
     "name": "unitconverter.fulvio",
     "description": "A simple offline unit of measure converter",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "unitConverter",
     "hooks": {
         "unitConverter": {
