@@ -18,7 +18,7 @@ Page {
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Temperature conversions")        
+        title: i18n.tr("Temperature conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
 
              OptionSelector {
                  id: temperatureUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
 
              OptionSelector {
                  id: temperatureUnitsOptionSelector

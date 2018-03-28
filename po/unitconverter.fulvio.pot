@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-02-28 21:37+0000\n"
+"POT-Creation-Date: 2018-03-28 16:48+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,7 +46,14 @@ msgstr ""
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:79
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:36
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:79
-msgid "Found "
+msgid "Found"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPagePhone.qml:79
+msgid "area units"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:50
@@ -196,7 +203,7 @@ msgid "Operation Result"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/InvalidInputPopUp.qml:15
-msgid "Attention: "
+msgid "Attention"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:21
@@ -204,31 +211,42 @@ msgstr ""
 msgid "Length conversions"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:187
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPage.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/LengthPagePhone.qml:79
+msgid "length units"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:103
+msgid "Invaid Input"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:191
 msgid "About"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:235
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:239
 msgid "Length"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:269
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:273
 msgid "Area"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:303
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:307
 msgid "Volume"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:337
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:341
 msgid "Weigth"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:372
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:376
 msgid "Temperature"
 msgstr ""
 
-#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:409
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:413
 msgid "pressure"
 msgstr ""
 
@@ -237,8 +255,19 @@ msgstr ""
 msgid "Pressure conversions"
 msgstr ""
 
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePage.qml:78
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/PressurePagePhone.qml:79
+msgid "pressure units"
+msgstr ""
+
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/ProductInfoDialogue.qml:9
 msgid "Product Info"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/ProductInfoDialogue.qml:10
+msgid "A simple offline unit of measure converter."
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:21
@@ -246,14 +275,35 @@ msgstr ""
 msgid "Temperature conversions"
 msgstr ""
 
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePage.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/TemperaturePagePhone.qml:79
+msgid "temperature units"
+msgstr ""
+
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:21
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:21
 msgid "Volume conversions"
 msgstr ""
 
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePage.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/VolumePagePhone.qml:78
+msgid "volume units"
+msgstr ""
+
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:21
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:21
 msgid "Weigth conversions"
+msgstr ""
+
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:79
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:36
+#: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:79
+msgid "weigth units"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Utility.js:121

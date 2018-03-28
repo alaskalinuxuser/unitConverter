@@ -18,7 +18,7 @@ Page {
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Length conversions")       
+        title: i18n.tr("Length conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: lengthUnitsChooserDialog
-             title: i18n.tr("Found "+lengthUnitsListModel.count+ " length units")
+             title: i18n.tr("Found")+" "+lengthUnitsListModel.count+" "+ i18n.tr("length units")
 
              OptionSelector {
                  id: lengthUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: lengthUnitsChooserDialog
-             title: i18n.tr("Found "+lengthUnitsListModel.count+ " length units")
+             title: i18n.tr("Found")+" "+lengthUnitsListModel.count+" "+ i18n.tr("length units")
 
              OptionSelector {
                  id: lengthUnitsOptionSelector
@@ -233,5 +233,3 @@ Page {
 
      }
 }
-
-

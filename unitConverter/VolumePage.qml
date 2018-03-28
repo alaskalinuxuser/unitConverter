@@ -18,7 +18,7 @@ Page {
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Volume conversions")       
+        title: i18n.tr("Volume conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: volumeUnitsChooserDialog
-             title: i18n.tr("Found "+volumeUnitsListModel.count+ " volume units")
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
                  id: volumeUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: volumeUnitsChooserDialog
-             title: i18n.tr("Found "+volumeUnitsListModel.count+ " volume units")
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
                  id: volumeUnitsOptionSelector

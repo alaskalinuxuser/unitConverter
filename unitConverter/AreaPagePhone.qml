@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: areaUnitsChooserDialog
-             title: i18n.tr("Found "+areaUnitsListModel.count+ " area units")
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+ " "+i18n.tr("area units")
 
              OptionSelector {
                  id: areaUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: areaUnitsChooserDialog
-             title: i18n.tr("Found "+areaUnitsListModel.count+ " area units")
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+" "+i18n.tr("area units")
 
              OptionSelector {
                  id: areaUnitsOptionSelector

@@ -7,7 +7,7 @@ import Ubuntu.Components.Popups 1.3
 Dialog {
        id: aboutProductDialogue
        title: i18n.tr("Product Info")
-       text: "UnitConverter version "+root.appVersion+"<br/> A simple offline unit of measure converter. <br/> Author: fulvio"
+       text: "UnitConverter version "+root.appVersion+"<br/>"+ i18n.tr("A simple offline unit of measure converter.")+" <br/> Author: fulvio"
 
        Button {
            text: "Close"

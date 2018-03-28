@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: weigthUnitsChooserDialog
-             title: i18n.tr("Found "+weigthUnitsListModel.count+ " weigth units")
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+ i18n.tr("weigth units")
 
              OptionSelector {
                  id: weigthUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: weigthUnitsChooserDialog
-             title: i18n.tr("Found "+weigthUnitsListModel.count+ " weigth units")
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+ " "+i18n.tr("weigth units")
 
              OptionSelector {
                  id: weigthUnitsOptionSelector
@@ -182,7 +182,7 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }          
+            }
 
             Button{
                 id: destinationUnitChooserButton

@@ -18,7 +18,7 @@ Page {
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Area conversions")       
+        title: i18n.tr("Area conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: areaUnitsChooserDialog
-             title: i18n.tr("Found "+areaUnitsListModel.count+ " area units")
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+ " "+i18n.tr("area units")
 
              OptionSelector {
                  id: areaUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: areaUnitsChooserDialog
-             title: i18n.tr("Found "+areaUnitsListModel.count+ " area units")
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+" "+i18n.tr("area units")
 
              OptionSelector {
                  id: areaUnitsOptionSelector

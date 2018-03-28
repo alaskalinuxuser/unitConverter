@@ -20,10 +20,14 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "unitconverter.fulvio"
 
-    property string appVersion : "1.3"
+    property string appVersion : "1.3.2"
 
-    width: units.gu(100)
-    height: units.gu(75)
+    //width: units.gu(100)
+    //height: units.gu(75)
+
+    /* phone 4.5 */
+    width: units.gu(50)
+    height: units.gu(96)
 
     Settings {
        id:settings
@@ -96,7 +100,7 @@ MainView {
 
     Component {
        id: invalidInputAlert
-       InvalidInputPopUp{msg: "Invaid Input"}
+       InvalidInputPopUp{msg: i18n.tr("Invaid Input")}
     }
 
     //------- Pages for Phone -----------
@@ -136,7 +140,7 @@ MainView {
     Component {
        id: lengthPage
        LengthPage{}
-    }   
+    }
 
     Component {
        id: areaPage
@@ -189,7 +193,7 @@ MainView {
                             PopupUtils.open(productInfoDialogue)
                         }
                     }
-                ]                
+                ]
             }
 
 
@@ -231,7 +235,7 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                            
+                        Text {
                             text: i18n.tr("Length");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: lengthImage.bottom
@@ -265,7 +269,7 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                           
+                        Text {
                             text: i18n.tr("Area");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: areaImage.bottom
@@ -299,7 +303,7 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                            
+                        Text {
                             text: i18n.tr("Volume");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: volumeImage.bottom
@@ -333,7 +337,7 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                            
+                        Text {
                             text: i18n.tr("Weigth");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: weightImage.bottom
@@ -368,7 +372,7 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                           
+                        Text {
                             text: i18n.tr("Temperature");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: temperatureImage.bottom
@@ -405,9 +409,9 @@ MainView {
                             fillMode: Image.PreserveAspectFit
                         }
 
-                        Text {                           
+                        Text {
                             text: i18n.tr("pressure");
-                            anchors.horizontalCenter: parent.horizontalCenter                           
+                            anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: pressureImage.bottom
                         }
 

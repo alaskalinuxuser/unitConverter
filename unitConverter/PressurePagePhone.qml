@@ -15,7 +15,7 @@ import "Utility.js" as Utility
 
 Page {
      id: pressurePagePhone
-     visible: false    
+     visible: false
 
      header: PageHeader {
         title: i18n.tr("Pressure conversions")
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: pressureUnitsChooserDialog
-             title: i18n.tr("Found "+pressureUnitsListModel.count+ " pressure units")
+             title: i18n.tr("Found")+" "+pressureUnitsListModel.count+" "+ i18n.tr("pressure units")
 
              OptionSelector {
                  id: pressureUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: pressureUnitsChooserDialog
-             title: i18n.tr("Found "+pressureUnitsListModel.count+ " pressure units")
+             title: i18n.tr("Found")+" "+pressureUnitsListModel.count+" "+ i18n.tr("pressure units")
 
              OptionSelector {
                  id: pressureUnitsOptionSelector
@@ -183,7 +183,7 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }           
+            }
 
             Button{
                 id: destinationUnitChooserButton

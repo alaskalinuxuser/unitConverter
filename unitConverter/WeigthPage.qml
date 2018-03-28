@@ -15,10 +15,10 @@ import "Utility.js" as Utility
 
 Page {
      id: weigthPage
-     visible: false     
+     visible: false
 
      header: PageHeader {
-        title: i18n.tr("Weigth conversions")       
+        title: i18n.tr("Weigth conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: weigthUnitsChooserDialog
-             title: i18n.tr("Found "+weigthUnitsListModel.count+ " weigth units")
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weigth units")
 
              OptionSelector {
                  id: weigthUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: weigthUnitsChooserDialog
-             title: i18n.tr("Found "+weigthUnitsListModel.count+ " weigth units")
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weigth units")
 
              OptionSelector {
                  id: weigthUnitsOptionSelector

@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: volumeUnitsChooserDialog
-             title: i18n.tr("Found "+volumeUnitsListModel.count+ " volume units")
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+i18n.tr("volume units")
 
              OptionSelector {
                  id: volumeUnitsOptionSelector
@@ -75,7 +75,7 @@ Page {
 
          Dialog {
              id: volumeUnitsChooserDialog
-             title: i18n.tr("Found "+volumeUnitsListModel.count+ " volume units")
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
                  id: volumeUnitsOptionSelector
@@ -181,7 +181,7 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }         
+            }
 
             Button{
                 id: destinationUnitChooserButton

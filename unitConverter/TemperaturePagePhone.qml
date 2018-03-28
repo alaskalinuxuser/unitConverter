@@ -15,7 +15,7 @@ import "Utility.js" as Utility
 
 Page {
      id: temperaturePagePhone
-     visible: false     
+     visible: false
 
      header: PageHeader {
         title: i18n.tr("Temperature conversions")
@@ -33,7 +33,7 @@ Page {
 
          Dialog {
              id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
 
              OptionSelector {
                  id: temperatureUnitsOptionSelector
@@ -76,7 +76,7 @@ Page {
 
          Dialog {
              id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found "+temperatureUnitsListModel.count+ " temperature units")
+             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
 
              OptionSelector {
                  id: temperatureUnitsOptionSelector
@@ -183,7 +183,7 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }           
+            }
 
             Button{
                 id: destinationUnitChooserButton

@@ -9,10 +9,10 @@ Dialog {
     title: i18n.tr("Operation Result")
 
     /* the message to display passed as parameter  */
-    property string msg;  
+    property string msg;
 
-    Label{       
-        text: i18n.tr("Attention: ") +msg
+    Label{
+        text: i18n.tr("Attention")+": " +msg
         color: UbuntuColors.red
     }
 
