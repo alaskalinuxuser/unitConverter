@@ -22,12 +22,12 @@ MainView {
 
     property string appVersion : "1.3.2"
 
-    //width: units.gu(100)
-    //height: units.gu(75)
+    width: units.gu(100)
+    height: units.gu(75)
 
     /* phone 4.5 */
-    width: units.gu(50)
-    height: units.gu(96)
+    //width: units.gu(50)
+    //height: units.gu(96)
 
     Settings {
        id:settings
