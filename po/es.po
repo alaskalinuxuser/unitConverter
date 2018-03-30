@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: unitConverter\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 13:47+0000\n"
-"PO-Revision-Date: 2018-03-28 18:58+0200\n"
+"POT-Creation-Date: 2018-03-29 23:29+0000\n"
+"PO-Revision-Date: 2018-03-30 14:18+0200\n"
 "Last-Translator: advocatux <advocatux@airpost.net>\n"
 "Language-Team: UBPorts Spanish Team\n"
 "Language: es\n"
@@ -47,9 +47,8 @@ msgstr "Conversiones de área"
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:79
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:36
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:79
-#, fuzzy
 msgid "Found"
-msgstr "Encontrado "
+msgstr "Encontrado"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:36
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/AreaPage.qml:79
@@ -222,7 +221,7 @@ msgstr "unidades de longitud"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:103
 msgid "Invaid Input"
-msgstr "entrada inválida"
+msgstr "Entrada inválida"
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:191
 msgid "About"
