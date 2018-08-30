@@ -20,7 +20,7 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "unitconverter.fulvio"
 
-    property string appVersion : "1.3.2"
+    property string appVersion : "1.3.3"
 
     width: units.gu(100)
     height: units.gu(75)
@@ -338,7 +338,7 @@ MainView {
                         }
 
                         Text {
-                            text: i18n.tr("Weigth");
+                            text: i18n.tr("Weight");
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: weightImage.bottom
                         }

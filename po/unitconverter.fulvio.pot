@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-03-29 23:29+0000\n"
+"POT-Creation-Date: 2018-08-30 07:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -239,7 +239,7 @@ msgid "Volume"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:341
-msgid "Weigth"
+msgid "Weight"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Main.qml:376
@@ -296,14 +296,14 @@ msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:21
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:21
-msgid "Weigth conversions"
+msgid "Weight conversions"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:36
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPage.qml:79
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:36
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/WeigthPagePhone.qml:79
-msgid "weigth units"
+msgid "weight units"
 msgstr ""
 
 #: /home/fulvio/Dropbox/ubuntu-devel/my-apps/unitConverter/Sources/unitConverter/unitConverter/Utility.js:121
