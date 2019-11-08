@@ -6,41 +6,43 @@ import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Temperature unit converter page for Phone
+  Volume unit converter page
 */
 
 Page {
-     id: temperaturePagePhone
+     id: volumePage
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Temperature conversions")
+        title: i18n.tr("Volume conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: temperatureUnitsListModelDelegate
+         id: volumeUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit Chooser --------------- */
      Component {
-         id: sourceTemperatureUnitsChooserComponent
+         id: sourceVolumeUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
+             id: volumeUnitsChooserDialog
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: volumeUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: volumeUnitsListModelDelegate
+                 model: volumeUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +52,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +60,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
              }
@@ -72,18 +74,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationTemperatureUnitsChooserComponent
+         id: destinationVolumeUnitsChooserComponent
 
          Dialog {
-             id: temperatureUnitsChooserDialog
-             title: i18n.tr("Found")+" "+temperatureUnitsListModel.count+" "+i18n.tr("temperature units")
+             id: volumeUnitsChooserDialog
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
-                 id: temperatureUnitsOptionSelector
+                 id: volumeUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: temperatureUnitsListModelDelegate
-                 model: temperatureUnitsListModel
+                 delegate: volumeUnitsListModelDelegate
+                 model: volumeUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -93,7 +95,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
 
@@ -101,19 +103,19 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = temperatureUnitsListModel.get(temperatureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(temperatureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
              }
          }
-    }
+     }
 
      Column{
-        id: temperaturePageColumn
+        id: volumePageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -127,51 +129,31 @@ Page {
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(1)
+            spacing:units.gu(2)
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: valueToConvertField.verticalCenter
+                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
                 text: i18n.tr("From:")
             }
 
             TextField{
                 id: valueToConvertField
-                width: units.gu(25)
+                width: units.gu(20)
                 enabled:true
             }
-         }
 
-         Row{
-             anchors.horizontalCenter: parent.horizontalCenter
-             spacing:units.gu(1)
-
-             Rectangle {
-                 color: "transparent"
-                 width: sourceUnitLabel.width
-                 height: units.gu(1)
-             }
-
-             Button{
-                 id: sourceUnitChooserButton
-                 width: units.gu(25)
-                 color: UbuntuColors.warmGrey
-                 iconName: "find"
-                 text: i18n.tr("Choose...")
-                 onClicked:  {
-                    PopupUtils.open(sourceTemperatureUnitsChooserComponent, sourceUnitChooserButton)
-                 }
-             }
-         }
-
-
-         /* line separator */
-         Rectangle {
-               color: "grey"
-               width: parent.width
-               anchors.horizontalCenter: parent.horizontalCenter
-               height: units.gu(0.1)
-         }
+            Button{
+                id: sourceUnitChooserButton
+                width: units.gu(25)
+                color: UbuntuColors.warmGrey
+                iconName: "find"
+                text: i18n.tr("Choose...")
+                onClicked:  {
+                    PopupUtils.open(sourceVolumeUnitsChooserComponent, sourceUnitChooserButton)
+                }
+            }
+        }
 
         /* ------------------ Destination Unit row ------------------ */
         Row{
@@ -185,6 +167,13 @@ Page {
                 text: i18n.tr("To:")
             }
 
+            /* transparent placeholder: required to place the content under the header */
+            Rectangle {
+                 color: "transparent"
+                 width: valueToConvertField.width
+                 height: units.gu(6)
+            }
+
             Button{
                 id: destinationUnitChooserButton
                 x: sourceUnitChooserButton.x
@@ -193,7 +182,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationTemperatureUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationVolumeUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -213,20 +202,8 @@ Page {
 
             TextField{
                 id: convertedValue
-                width: units.gu(25)
+                width: units.gu(20)
                 enabled:false
-            }
-         }
-
-         Row{
-            anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(3)
-
-            /* transparent placeholder */
-            Rectangle {
-                 color: "transparent"
-                 width: destinationUnitLabel.width
-                 height: units.gu(6)
             }
 
             Button{
@@ -239,7 +216,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertTemperature(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertVolume(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -257,5 +234,4 @@ Page {
         }
 
      }
-
 }

@@ -2,45 +2,50 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
-
 import Ubuntu.Components.ListItems 1.3 as ListItem
+
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/numericBaseConverter.js" as NumericBaseConverter
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Area unit converter page for Phone
+  Numeric unit converter page for Phone
 */
 
 Page {
-     id: areaPagePhone
+     id: numericPagePhone
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Area conversions")
+        title: i18n.tr("Numeric conversions")
      }
+
+     property string fromUnitBase;
+     property string toUnitBase;
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: areaUnitsListModelDelegate
-         OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
+         id: numericUnitsListModelDelegate
+         OptionSelectorDelegate { text: sourceUnit; }
      }
 
-     /* ------------- Source Unit Chooser--------------- */
+     /* ------------- Source Unit Chooser --------------- */
      Component {
-         id: sourceAreaUnitsChooserComponent
+         id: sourcenumericUnitsChooserComponent
 
          Dialog {
-             id: areaUnitsChooserDialog
-             title: i18n.tr("Found")+" "+areaUnitsListModel.count+ " "+i18n.tr("area units")
+             id: numericUnitsChooserDialog
+             title: i18n.tr("Found")+" "+numericUnitsListModel.count+" "+ i18n.tr("numeric units")
 
              OptionSelector {
-                 id: areaUnitsOptionSelector
+                 id: numericUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: areaUnitsListModelDelegate
-                 model: areaUnitsListModel
+                 delegate: numericUnitsListModelDelegate
+                 model: numericUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +55,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(areaUnitsChooserDialog)
+                         PopupUtils.close(numericUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +63,12 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
-                         //reset previous convertions
+                         sourceUnitChooserButton.text = numericUnitsListModel.get(numericUnitsOptionSelector.selectedIndex).sourceUnit;
+                         fromUnitBase = numericUnitsListModel.get(numericUnitsOptionSelector.selectedIndex).sourceUnitSymbol;
+                         /* reset previous convertions */
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(areaUnitsChooserDialog)
+                         PopupUtils.close(numericUnitsChooserDialog)
                      }
                  }
              }
@@ -72,18 +78,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationAreaUnitsChooserComponent
+         id: destinationnumericUnitsChooserComponent
 
          Dialog {
-             id: areaUnitsChooserDialog
-             title: i18n.tr("Found")+" "+areaUnitsListModel.count+" "+i18n.tr("area units")
+             id: numericUnitsChooserDialog
+             title: i18n.tr("Found")+" "+numericUnitsListModel.count+ " "+i18n.tr("numeric units")
 
              OptionSelector {
-                 id: areaUnitsOptionSelector
+                 id: numericUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: areaUnitsListModelDelegate
-                 model: areaUnitsListModel
+                 delegate: numericUnitsListModelDelegate
+                 model: numericUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -93,7 +99,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(areaUnitsChooserDialog)
+                         PopupUtils.close(numericUnitsChooserDialog)
                      }
                  }
 
@@ -101,11 +107,12 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
-                         //reset previous convertions
+                         destinationUnitChooserButton.text = numericUnitsListModel.get(numericUnitsOptionSelector.selectedIndex).sourceUnit;
+                         toUnitBase = numericUnitsListModel.get(numericUnitsOptionSelector.selectedIndex).sourceUnitSymbol;
+                         /* reset previous convertions */
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(areaUnitsChooserDialog)
+                         PopupUtils.close(numericUnitsChooserDialog)
                      }
                  }
              }
@@ -113,7 +120,7 @@ Page {
      }
 
      Column{
-        id: areaPageColumn
+        id: numericPageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -124,6 +131,7 @@ Page {
             height: units.gu(6)
         }
 
+        /* ------------------ Source Unit row ------------------ */
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
@@ -140,9 +148,9 @@ Page {
                 width: units.gu(25)
                 enabled:true
             }
-         }
+        }
 
-         Row{
+        Row{
             anchors.horizontalCenter: parent.horizontalCenter
             spacing:units.gu(1)
 
@@ -154,23 +162,24 @@ Page {
 
             Button{
                 id: sourceUnitChooserButton
+                x: valueToConvertField.x
                 width: units.gu(25)
                 color: UbuntuColors.warmGrey
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceAreaUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourcenumericUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
-         }
+        }
 
-         /* line separator */
-         Rectangle {
-               color: "grey"
-               width: parent.width
-               anchors.horizontalCenter: parent.horizontalCenter
-               height: units.gu(0.1)
-         }
+        /* line separator */
+        Rectangle {
+            color: "grey"
+            width: parent.width
+            anchors.horizontalCenter: parent.horizontalCenter
+            height: units.gu(0.1)
+        }
 
         /* ------------------ Destination Unit row ------------------ */
         Row{
@@ -192,41 +201,22 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationAreaUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationnumericUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
 
-        /* ------------ Result Row ----------- */
+        /* ------------ Convert Row ----------- */
         Row{
-            id: resultRow
             anchors.horizontalCenter: parent.horizontalCenter
             spacing:units.gu(3)
 
-            /* transparent placeholder: required to place the content under the header */
+            /* transparent placeholder */
             Rectangle {
                  color: "transparent"
                  width: destinationUnitLabel.width
                  height: units.gu(6)
             }
-
-            TextField{
-                id: convertedValue
-                width: units.gu(25)
-                enabled:false
-            }
-         }
-
-         Row {
-             anchors.horizontalCenter: parent.horizontalCenter
-             spacing:units.gu(3)
-
-             /* transparent placeholder */
-             Rectangle {
-                  color: "transparent"
-                  width: destinationUnitLabel.width
-                  height: units.gu(6)
-             }
 
             Button{
                 id: doConvertionButton
@@ -235,26 +225,30 @@ Page {
                 text: i18n.tr("Convert")
                 onClicked:  {
                     /* Perform conversion */
-                    if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
+                    if(Utility.isInputTextEmpty(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertArea(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = NumericBaseConverter.convertBase(valueToConvertField.text.trim(), fromUnitBase, toUnitBase);
                         convertedValue.enabled = true;
                     }
                 }
             }
         }
 
+        /* ------------ Result Row ----------- */
         Row{
-            id: infoRow
+            id: resultRow
             anchors.horizontalCenter: parent.horizontalCenter
-
-            Label{
-                id:noteLabel
-                text: i18n.tr("Note: the decimal separtor in use is '.'")
-            }
-        }
+            /* uses a textArea to contains large binary*/
+            TextArea {
+                  id: convertedValue
+                  enabled:false
+                  width: destinationUnitRow.width
+                  height: units.gu(8)
+                  textFormat: TextEdit.AutoText
+                  selectByMouse: true
+           }
+       }
 
      }
-
 }

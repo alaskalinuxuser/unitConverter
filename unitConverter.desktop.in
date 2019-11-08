@@ -1,7 +1,7 @@
 [Desktop Entry]
 _Name=unitConverter
-Exec=qmlscene %U unitConverter/Main.qml
-Icon=unitConverter/unitConverter.png
+Exec=qmlscene %U qml/Main.qml
+Icon=assets/unitConverter.png
 Terminal=false
 Type=Application
 X-Ubuntu-Touch=true

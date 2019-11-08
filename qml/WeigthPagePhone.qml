@@ -6,41 +6,43 @@ import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Volume unit converter page
+  Weigth unit converter page for Phone
 */
 
 Page {
-     id: volumePage
+     id: weigthPagePhone
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Volume conversions")
+        title: i18n.tr("Weight conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: volumeUnitsListModelDelegate
+         id: weigthUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
-     /* ------------- Source Unit Chooser --------------- */
+     /* ------------- Source Unit Chooser--------------- */
      Component {
-         id: sourceVolumeUnitsChooserComponent
+         id: sourceWeigthUnitsChooserComponent
 
          Dialog {
-             id: volumeUnitsChooserDialog
-             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
+             id: weigthUnitsChooserDialog
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+ i18n.tr("weight units")
 
              OptionSelector {
-                 id: volumeUnitsOptionSelector
+                 id: weigthUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: volumeUnitsListModelDelegate
-                 model: volumeUnitsListModel
+                 delegate: weigthUnitsListModelDelegate
+                 model: weigthUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +52,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(volumeUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +60,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(volumeUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
              }
@@ -72,18 +74,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationVolumeUnitsChooserComponent
+         id: destinationWeigthUnitsChooserComponent
 
          Dialog {
-             id: volumeUnitsChooserDialog
-             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
+             id: weigthUnitsChooserDialog
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+ " "+i18n.tr("weight units")
 
              OptionSelector {
-                 id: volumeUnitsOptionSelector
+                 id: weigthUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: volumeUnitsListModelDelegate
-                 model: volumeUnitsListModel
+                 delegate: weigthUnitsListModelDelegate
+                 model: weigthUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -93,7 +95,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(volumeUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
 
@@ -101,11 +103,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(volumeUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
              }
@@ -113,7 +115,7 @@ Page {
      }
 
      Column{
-        id: volumePageColumn
+        id: weigthPageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -127,30 +129,49 @@ Page {
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(2)
+            spacing:units.gu(1)
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
+                anchors.verticalCenter: valueToConvertField.verticalCenter
                 text: i18n.tr("From:")
             }
 
             TextField{
                 id: valueToConvertField
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:true
             }
+         }
 
-            Button{
+         Row{
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing:units.gu(1)
+
+             Rectangle {
+                 color: "transparent"
+                 width: sourceUnitLabel.width
+                 height: units.gu(1)
+             }
+
+             Button{
                 id: sourceUnitChooserButton
                 width: units.gu(25)
                 color: UbuntuColors.warmGrey
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceVolumeUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourceWeigthUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
+        }
+
+        /* line separator */
+        Rectangle {
+               color: "grey"
+               width: parent.width
+               anchors.horizontalCenter: parent.horizontalCenter
+               height: units.gu(0.1)
         }
 
         /* ------------------ Destination Unit row ------------------ */
@@ -165,13 +186,6 @@ Page {
                 text: i18n.tr("To:")
             }
 
-            /* transparent placeholder: required to place the content under the header */
-            Rectangle {
-                 color: "transparent"
-                 width: valueToConvertField.width
-                 height: units.gu(6)
-            }
-
             Button{
                 id: destinationUnitChooserButton
                 x: sourceUnitChooserButton.x
@@ -180,7 +194,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationVolumeUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationWeigthUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -200,11 +214,23 @@ Page {
 
             TextField{
                 id: convertedValue
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:false
             }
+          }
 
-            Button{
+          Row{
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing:units.gu(3)
+
+              /* transparent placeholder */
+             Rectangle {
+                color: "transparent"
+                width: destinationUnitLabel.width
+                height: units.gu(6)
+             }
+
+             Button{
                 id: doConvertionButton
                 width: units.gu(25)
                 color: UbuntuColors.green
@@ -214,7 +240,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertVolume(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertWeigth(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -230,6 +256,5 @@ Page {
                 text: i18n.tr("Note: the decimal separtor in use is '.'")
             }
         }
-
      }
 }

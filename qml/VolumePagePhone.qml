@@ -2,45 +2,47 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
 
+import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Pressure unit converter page
+  Volume unit converter page for Phone
 */
 
 Page {
-     id: pressurePage
+     id: volumePagePhone
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Pressure conversions")
+        title: i18n.tr("Volume conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: pressureUnitsListModelDelegate
+         id: volumeUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit Chooser --------------- */
      Component {
-         id: sourcePressureUnitsChooserComponent
+         id: sourceVolumeUnitsChooserComponent
 
          Dialog {
-             id: pressureUnitsChooserDialog
-             title: i18n.tr("Found")+" "+pressureUnitsListModel.count+" "+ i18n.tr("pressure units")
+             id: volumeUnitsChooserDialog
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+i18n.tr("volume units")
 
              OptionSelector {
-                 id: pressureUnitsOptionSelector
+                 id: volumeUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: pressureUnitsListModelDelegate
-                 model: pressureUnitsListModel
+                 delegate: volumeUnitsListModelDelegate
+                 model: volumeUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +52,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(pressureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +60,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = pressureUnitsListModel.get(pressureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(pressureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
              }
@@ -71,18 +73,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationPressureUnitsChooserComponent
+         id: destinationVolumeUnitsChooserComponent
 
          Dialog {
-             id: pressureUnitsChooserDialog
-             title: i18n.tr("Found")+" "+pressureUnitsListModel.count+" "+ i18n.tr("pressure units")
+             id: volumeUnitsChooserDialog
+             title: i18n.tr("Found")+" "+volumeUnitsListModel.count+" "+ i18n.tr("volume units")
 
              OptionSelector {
-                 id: pressureUnitsOptionSelector
+                 id: volumeUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: pressureUnitsListModelDelegate
-                 model: pressureUnitsListModel
+                 delegate: volumeUnitsListModelDelegate
+                 model: volumeUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -92,7 +94,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(pressureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
 
@@ -100,20 +102,19 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = pressureUnitsListModel.get(pressureUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = volumeUnitsListModel.get(volumeUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(pressureUnitsChooserDialog)
+                         PopupUtils.close(volumeUnitsChooserDialog)
                      }
                  }
              }
          }
      }
 
-
      Column{
-        id: pressurePageColumn
+        id: volumePageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -127,18 +128,29 @@ Page {
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(2)
+            spacing:units.gu(1)
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
+                anchors.verticalCenter: valueToConvertField.verticalCenter
                 text: i18n.tr("From:")
             }
 
             TextField{
                 id: valueToConvertField
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:true
+            }
+        }
+
+        Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(1)
+
+            Rectangle {
+                color: "transparent"
+                width: sourceUnitLabel.width
+                height: units.gu(1)
             }
 
             Button{
@@ -148,9 +160,17 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourcePressureUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourceVolumeUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
+        }
+
+        /* line separator */
+        Rectangle {
+              color: "grey"
+              width: parent.width
+              anchors.horizontalCenter: parent.horizontalCenter
+              height: units.gu(0.1)
         }
 
         /* ------------------ Destination Unit row ------------------ */
@@ -165,13 +185,6 @@ Page {
                 text: i18n.tr("To:")
             }
 
-            /* transparent placeholder: required to place the content under the header */
-            Rectangle {
-                 color: "transparent"
-                 width: valueToConvertField.width
-                 height: units.gu(6)
-            }
-
             Button{
                 id: destinationUnitChooserButton
                 x: sourceUnitChooserButton.x
@@ -180,7 +193,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationPressureUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationVolumeUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -191,7 +204,7 @@ Page {
             anchors.horizontalCenter: parent.horizontalCenter
             spacing:units.gu(3)
 
-            /* transparent placeholder: required to place the content under the header */
+            /* transparent placeholder */
             Rectangle {
                  color: "transparent"
                  width: destinationUnitLabel.width
@@ -200,8 +213,20 @@ Page {
 
             TextField{
                 id: convertedValue
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:false
+            }
+        }
+
+        Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(3)
+
+            /* transparent placeholder */
+            Rectangle {
+                 color: "transparent"
+                 width: destinationUnitLabel.width
+                 height: units.gu(6)
             }
 
             Button{
@@ -214,7 +239,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertPressure(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertVolume(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -230,6 +255,7 @@ Page {
                 text: i18n.tr("Note: the decimal separtor in use is '.'")
             }
         }
+
      }
 
 }

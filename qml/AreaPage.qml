@@ -6,41 +6,43 @@ import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Weigth unit converter page
+  Area unit converter page
 */
 
 Page {
-     id: weigthPage
+     id: areaPage
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Weight conversions")
+        title: i18n.tr("Area conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: weigthUnitsListModelDelegate
+         id: areaUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit Chooser --------------- */
      Component {
-         id: sourceWeigthUnitsChooserComponent
+         id: sourceAreaUnitsChooserComponent
 
          Dialog {
-             id: weigthUnitsChooserDialog
-             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weight units")
+             id: areaUnitsChooserDialog
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+ " "+i18n.tr("area units")
 
              OptionSelector {
-                 id: weigthUnitsOptionSelector
+                 id: areaUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: weigthUnitsListModelDelegate
-                 model: weigthUnitsListModel
+                 delegate: areaUnitsListModelDelegate
+                 model: areaUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +52,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(weigthUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +60,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(weigthUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
              }
@@ -72,18 +74,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationWeigthUnitsChooserComponent
+         id: destinationAreaUnitsChooserComponent
 
          Dialog {
-             id: weigthUnitsChooserDialog
-             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weight units")
+             id: areaUnitsChooserDialog
+             title: i18n.tr("Found")+" "+areaUnitsListModel.count+" "+i18n.tr("area units")
 
              OptionSelector {
-                 id: weigthUnitsOptionSelector
+                 id: areaUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: weigthUnitsListModelDelegate
-                 model: weigthUnitsListModel
+                 delegate: areaUnitsListModelDelegate
+                 model: areaUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -93,7 +95,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(weigthUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
 
@@ -101,19 +103,20 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = areaUnitsListModel.get(areaUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(weigthUnitsChooserDialog)
+                         PopupUtils.close(areaUnitsChooserDialog)
                      }
                  }
              }
          }
      }
+     //-------------------------------------------------------
 
      Column{
-        id: weigthPageColumn
+        id: areaPageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -148,12 +151,12 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceWeigthUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourceAreaUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
         }
 
-        /* ------------------ Destination Unit row ------------------ */
+        /* ------------------ Destination Unit row------------------ */
         Row{
             id: destinationUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
@@ -180,7 +183,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationWeigthUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationAreaUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -214,7 +217,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertWeigth(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertArea(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -230,6 +233,7 @@ Page {
                 text: i18n.tr("Note: the decimal separtor in use is '.'")
             }
         }
+
      }
 
 }

@@ -6,15 +6,17 @@ import Ubuntu.Components.Pickers 1.3
 import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Temperature unit converter page
+  Temperature unit converter page for Phone
 */
 
 Page {
-     id: temperaturePage
+     id: temperaturePagePhone
      visible: false
 
      header: PageHeader {
@@ -110,7 +112,7 @@ Page {
                  }
              }
          }
-     }
+    }
 
      Column{
         id: temperaturePageColumn
@@ -127,31 +129,51 @@ Page {
         Row{
             id: sourceUnitRow
             anchors.horizontalCenter: parent.horizontalCenter
-            spacing:units.gu(2)
+            spacing:units.gu(1)
 
             Label{
                 id: sourceUnitLabel
-                anchors.verticalCenter: sourceUnitChooserButton.verticalCenter
+                anchors.verticalCenter: valueToConvertField.verticalCenter
                 text: i18n.tr("From:")
             }
 
             TextField{
                 id: valueToConvertField
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:true
             }
+         }
 
-            Button{
-                id: sourceUnitChooserButton
-                width: units.gu(25)
-                color: UbuntuColors.warmGrey
-                iconName: "find"
-                text: i18n.tr("Choose...")
-                onClicked:  {
+         Row{
+             anchors.horizontalCenter: parent.horizontalCenter
+             spacing:units.gu(1)
+
+             Rectangle {
+                 color: "transparent"
+                 width: sourceUnitLabel.width
+                 height: units.gu(1)
+             }
+
+             Button{
+                 id: sourceUnitChooserButton
+                 width: units.gu(25)
+                 color: UbuntuColors.warmGrey
+                 iconName: "find"
+                 text: i18n.tr("Choose...")
+                 onClicked:  {
                     PopupUtils.open(sourceTemperatureUnitsChooserComponent, sourceUnitChooserButton)
-                }
-            }
-        }
+                 }
+             }
+         }
+
+
+         /* line separator */
+         Rectangle {
+               color: "grey"
+               width: parent.width
+               anchors.horizontalCenter: parent.horizontalCenter
+               height: units.gu(0.1)
+         }
 
         /* ------------------ Destination Unit row ------------------ */
         Row{
@@ -163,13 +185,6 @@ Page {
                 id: destinationUnitLabel
                 anchors.verticalCenter: destinationUnitChooserButton.verticalCenter
                 text: i18n.tr("To:")
-            }
-
-            /* transparent placeholder: required to place the content under the header */
-            Rectangle {
-                 color: "transparent"
-                 width: valueToConvertField.width
-                 height: units.gu(6)
             }
 
             Button{
@@ -200,8 +215,20 @@ Page {
 
             TextField{
                 id: convertedValue
-                width: units.gu(20)
+                width: units.gu(25)
                 enabled:false
+            }
+         }
+
+         Row{
+            anchors.horizontalCenter: parent.horizontalCenter
+            spacing:units.gu(3)
+
+            /* transparent placeholder */
+            Rectangle {
+                 color: "transparent"
+                 width: destinationUnitLabel.width
+                 height: units.gu(6)
             }
 
             Button{

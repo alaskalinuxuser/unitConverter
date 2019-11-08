@@ -4,10 +4,12 @@ import Ubuntu.Components.Popups 1.3
 import Qt.labs.settings 1.0
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
+import "js/Storage.js" as Storage
 
-/*!
-    \brief Aplication MainView
+import "images"
+
+/*
+   Aplication MainView
 */
 MainView {
 
@@ -20,8 +22,12 @@ MainView {
     // Note! applicationName needs to match the "name" field of the click manifest
     applicationName: "unitconverter.fulvio"
 
-    property string appVersion : "1.3.3"
+    /* enable to test with dark theme */
+    //theme.name: "Ubuntu.Components.Themes.SuruDark"
 
+    property string appVersion : "1.5"
+
+    //rel
     width: units.gu(100)
     height: units.gu(75)
 
@@ -51,6 +57,8 @@ MainView {
             Storage.insertTemperatureDefaultConvertionEntry();
             Storage.insertPressureDefaultConvertionEntry();
 
+            /* numeric conversions values are inserted by Javascript code. No DB stored info */
+
             settings.isFirstUse = false
         }
 
@@ -61,6 +69,9 @@ MainView {
         Storage.getWeigthUnit();
         Storage.getTemperatureUnit();
         Storage.getPressureUnit();
+
+        /* numeric conversions are calculated at runtime by Javascript. No stored info */
+        Storage.getNumericUnit();
     }
 
     Component {
@@ -98,6 +109,11 @@ MainView {
         id: pressureUnitsListModel
     }
 
+    /* The available numeric unit loaded at App startUp */
+    ListModel {
+        id: numericUnitsListModel
+    }
+
     Component {
        id: invalidInputAlert
        InvalidInputPopUp{msg: i18n.tr("Invaid Input")}
@@ -133,6 +149,11 @@ MainView {
        id: pressurePagePhone
        PressurePagePhone{}
     }
+
+    Component {
+       id: numericPagePhone
+       NumericPagePhone{}
+    }
     //------------------------------------
 
 
@@ -166,6 +187,11 @@ MainView {
        id: pressurePage
        PressurePage{}
     }
+
+    Component {
+       id: numericPage
+       NumericPage{}
+    }
     //---------------------------------
 
 
@@ -197,18 +223,17 @@ MainView {
             }
 
 
-            property int n_columns: height > width ? 2 : 3
-            property int n_rows: height > width ? 3 : 2
+            property int n_columns: height > width ? 3 : 4
+            property int n_rows: height > width ? 4 : 3
             property int rectangle_container_size: Math.min (width / n_columns, height / n_rows) * 0.8
             property int rectangle_container_radius: 10
             property int rectangle_container_x_spacing: (width - rectangle_container_size * n_columns) / (n_columns + 1)
             property int rectangle_container_y_spacing: (height - rectangle_container_size * n_rows) / (n_rows + 1)
 
 
-
             Grid {
                 x: mainPage.rectangle_container_x_spacing
-                y: mainPage.rectangle_container_y_spacing
+                y: mainPage.rectangle_container_y_spacing + units.gu(5)
                 columns: mainPage.n_columns
                 rows: mainPage.n_rows
 
@@ -227,7 +252,7 @@ MainView {
 
                         Image {
                             id: lengthImage
-                            source: "length.png"
+                            source: Qt.resolvedUrl("./images/length.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -261,7 +286,7 @@ MainView {
 
                         Image {
                             id: areaImage
-                            source: "area.png"
+                            source: Qt.resolvedUrl("./images/area.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -295,7 +320,7 @@ MainView {
 
                         Image {
                             id: volumeImage
-                            source: "volume.png"
+                            source: Qt.resolvedUrl("./images/volume.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -322,14 +347,14 @@ MainView {
                 Rectangle {
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.orangeGradient
+                    color: UbuntuColors.porcelain
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
 
                         Image {
                             id: weightImage
-                            source: "weight.png"
+                            source: Qt.resolvedUrl("./images/weight.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -364,7 +389,7 @@ MainView {
 
                         Image {
                             id: temperatureImage
-                            source: "temperature.png"
+                            source: Qt.resolvedUrl("./images/temperature.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -401,7 +426,7 @@ MainView {
 
                         Image {
                             id:pressureImage
-                            source: "pressure.png"
+                            source: Qt.resolvedUrl("./images/pressure.png")
                             anchors.horizontalCenter: parent.horizontalCenter
                             anchors.verticalCenter: parent.verticalCenter
                             width: parent.width * 0.8
@@ -425,6 +450,42 @@ MainView {
                         }
                     }
                 }
+
+             		Rectangle {
+                    id: numericMenu
+                    width: mainPage.rectangle_container_size
+                    height: mainPage.rectangle_container_size
+                    color: UbuntuColors.porcelain
+                    border.color: "black"
+                    MouseArea {
+                        anchors.fill: parent;
+
+                        Image {
+                            id: numericImage
+                            source: Qt.resolvedUrl("./images/numeric.png")
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: parent.verticalCenter
+                            width: parent.width * 0.8
+                            height: parent.height * 0.8
+                            fillMode: Image.PreserveAspectFit
+                        }
+
+                        Text {
+                            text: i18n.tr("Numeric");
+                            anchors.horizontalCenter: parent.horizontalCenter
+                            anchors.verticalCenter: numericImage.bottom
+                        }
+
+                        onClicked: {
+                            if (root.width > units.gu(80)){
+                                pageStack.push(numericPage)
+                            }else {
+                               pageStack.push(numericPagePhone)
+                            }
+                        }
+                    }
+                }
+		            //--------------
             }
         }
 

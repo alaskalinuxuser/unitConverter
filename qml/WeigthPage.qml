@@ -2,45 +2,47 @@ import QtQuick 2.4
 import Ubuntu.Components 1.3
 import Ubuntu.Components.Popups 1.3
 import Ubuntu.Components.Pickers 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
 
+import Ubuntu.Components.ListItems 1.3 as ListItem
 import QtQuick.LocalStorage 2.0
 
-import "Storage.js"  as Storage
-import "Utility.js" as Utility
+import "js/Storage.js" as Storage
+import "js/Utility.js" as Utility
+
+import "images"
 
 /*
-  Length unit converter page
+  Weigth unit converter page
 */
 
 Page {
-     id: lengthPage
+     id: weigthPage
      visible: false
 
      header: PageHeader {
-        title: i18n.tr("Length conversions")
+        title: i18n.tr("Weight conversions")
      }
 
      /* define how to render the entry in the OptionSelector */
      Component {
-         id: lengthUnitsListModelDelegate
+         id: weigthUnitsListModelDelegate
          OptionSelectorDelegate { text: sourceUnit; subText: sourceUnitSymbol; }
      }
 
      /* ------------- Source Unit Chooser --------------- */
      Component {
-         id: sourceLengthUnitsChooserComponent
+         id: sourceWeigthUnitsChooserComponent
 
          Dialog {
-             id: lengthUnitsChooserDialog
-             title: i18n.tr("Found")+" "+lengthUnitsListModel.count+" "+ i18n.tr("length units")
+             id: weigthUnitsChooserDialog
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weight units")
 
              OptionSelector {
-                 id: lengthUnitsOptionSelector
+                 id: weigthUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: lengthUnitsListModelDelegate
-                 model: lengthUnitsListModel
+                 delegate: weigthUnitsListModelDelegate
+                 model: weigthUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -50,7 +52,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(lengthUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
 
@@ -58,11 +60,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         sourceUnitChooserButton.text = lengthUnitsListModel.get(lengthUnitsOptionSelector.selectedIndex).sourceUnit;
+                         sourceUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(lengthUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
              }
@@ -72,18 +74,18 @@ Page {
 
      /* ------------- Destination Unit Chooser --------------- */
      Component {
-         id: destinationLengthUnitsChooserComponent
+         id: destinationWeigthUnitsChooserComponent
 
          Dialog {
-             id: lengthUnitsChooserDialog
-             title: i18n.tr("Found")+" "+lengthUnitsListModel.count+" "+ i18n.tr("length units")
+             id: weigthUnitsChooserDialog
+             title: i18n.tr("Found")+" "+weigthUnitsListModel.count+" "+i18n.tr("weight units")
 
              OptionSelector {
-                 id: lengthUnitsOptionSelector
+                 id: weigthUnitsOptionSelector
                  expanded: true
                  multiSelection: false
-                 delegate: lengthUnitsListModelDelegate
-                 model: lengthUnitsListModel
+                 delegate: weigthUnitsListModelDelegate
+                 model: weigthUnitsListModel
                  containerHeight: itemHeight * 4
              }
 
@@ -93,7 +95,7 @@ Page {
                      text: i18n.tr("Close")
                      width: units.gu(14)
                      onClicked: {
-                         PopupUtils.close(lengthUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
 
@@ -101,11 +103,11 @@ Page {
                      text: i18n.tr("Select")
                      width: units.gu(14)
                      onClicked: {
-                         destinationUnitChooserButton.text = lengthUnitsListModel.get(lengthUnitsOptionSelector.selectedIndex).sourceUnit;
+                         destinationUnitChooserButton.text = weigthUnitsListModel.get(weigthUnitsOptionSelector.selectedIndex).sourceUnit;
                          //reset previous convertions
                          convertedValue.text= ''
                          convertedValue.enabled= false
-                         PopupUtils.close(lengthUnitsChooserDialog)
+                         PopupUtils.close(weigthUnitsChooserDialog)
                      }
                  }
              }
@@ -113,7 +115,7 @@ Page {
      }
 
      Column{
-        id: lengthPageColumn
+        id: weigthPageColumn
         spacing: units.gu(2)
         anchors.fill: parent
 
@@ -148,7 +150,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(sourceLengthUnitsChooserComponent, sourceUnitChooserButton)
+                    PopupUtils.open(sourceWeigthUnitsChooserComponent, sourceUnitChooserButton)
                 }
             }
         }
@@ -180,7 +182,7 @@ Page {
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
-                    PopupUtils.open(destinationLengthUnitsChooserComponent, destinationUnitChooserButton)
+                    PopupUtils.open(destinationWeigthUnitsChooserComponent, destinationUnitChooserButton)
                 }
             }
         }
@@ -214,7 +216,7 @@ Page {
                     if(Utility.isInputTextEmpty(valueToConvertField.text) || Utility.isNotNumeric(valueToConvertField.text)) {
                         PopupUtils.open(invalidInputAlert);
                     } else {
-                        convertedValue.text = Storage.convertLength(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
+                        convertedValue.text = Storage.convertWeigth(sourceUnitChooserButton.text,destinationUnitChooserButton.text, valueToConvertField.text.trim());
                         convertedValue.enabled = true;
                     }
                 }
@@ -230,6 +232,6 @@ Page {
                 text: i18n.tr("Note: the decimal separtor in use is '.'")
             }
         }
-
      }
+
 }

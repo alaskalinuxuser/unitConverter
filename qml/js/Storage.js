@@ -525,7 +525,7 @@
     }
 
     /* get the names of the Volume unit to show them in the combo box */
-    function getVolumeUnit() {        
+    function getVolumeUnit() {
 
         var db = getDatabase();
         var rs;
@@ -599,7 +599,16 @@
         }
     }
 
+    /* Fill the Numeric List Model unit to show them in the combo box
+       NOTE: they are NOT taken from Database, but "Hardcoded" here
+    */
+    function getNumericUnit() {
 
+        numericUnitsListModel.append({"sourceUnit" : "Decimal", "sourceUnitSymbol" : "10" } );
+        numericUnitsListModel.append({"sourceUnit" : "Hexadecimal", "sourceUnitSymbol" : "16" } );
+        numericUnitsListModel.append({"sourceUnit" : "Binary", "sourceUnitSymbol" : "2" } );
+        numericUnitsListModel.append({"sourceUnit" : "Octal", "sourceUnitSymbol" : "8" } );
+    }
 
 /* -------------------------------------------------------------------------- */
 
@@ -611,7 +620,7 @@
         var db = getDatabase();
         db.transaction(
            function(tx) {
-                tx.executeSql('DELETE FROM '+tableName);
+              tx.executeSql('DELETE FROM '+tableName);
            });
     }
 
