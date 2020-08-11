@@ -1,0 +1,249 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the unitconverter.fulvio package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: unitconverter.fulvio\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-08 21:21+0000\n"
+"PO-Revision-Date: 2020-07-13 21:33+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3.1\n"
+"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: nl\n"
+
+#: ../qml/LengthPage.qml:23 ../qml/LengthPagePhone.qml:23
+msgid "Length conversions"
+msgstr "Lengte omzetten"
+
+#: ../qml/LengthPage.qml:38 ../qml/LengthPage.qml:81
+#: ../qml/TemperaturePage.qml:38 ../qml/TemperaturePage.qml:81
+#: ../qml/AreaPage.qml:38 ../qml/AreaPage.qml:81
+#: ../qml/PressurePagePhone.qml:38 ../qml/PressurePagePhone.qml:81
+#: ../qml/TemperaturePagePhone.qml:38 ../qml/TemperaturePagePhone.qml:81
+#: ../qml/NumericPage.qml:41 ../qml/NumericPage.qml:85
+#: ../qml/NumericPagePhone.qml:41 ../qml/NumericPagePhone.qml:85
+#: ../qml/AreaPagePhone.qml:38 ../qml/AreaPagePhone.qml:81
+#: ../qml/WeigthPagePhone.qml:38 ../qml/WeigthPagePhone.qml:81
+#: ../qml/LengthPagePhone.qml:38 ../qml/LengthPagePhone.qml:81
+#: ../qml/PressurePage.qml:38 ../qml/PressurePage.qml:80
+#: ../qml/VolumePage.qml:38 ../qml/VolumePage.qml:81
+#: ../qml/VolumePagePhone.qml:38 ../qml/VolumePagePhone.qml:80
+#: ../qml/WeigthPage.qml:38 ../qml/WeigthPage.qml:81
+msgid "Found"
+msgstr "Gevonden"
+
+#: ../qml/LengthPage.qml:38 ../qml/LengthPage.qml:81
+#: ../qml/LengthPagePhone.qml:38 ../qml/LengthPagePhone.qml:81
+msgid "length units"
+msgstr "lengte-eenheden"
+
+#: ../qml/LengthPage.qml:52 ../qml/LengthPage.qml:95
+#: ../qml/TemperaturePage.qml:52 ../qml/TemperaturePage.qml:95
+#: ../qml/AreaPage.qml:52 ../qml/AreaPage.qml:95
+#: ../qml/PressurePagePhone.qml:52 ../qml/PressurePagePhone.qml:95
+#: ../qml/TemperaturePagePhone.qml:52 ../qml/TemperaturePagePhone.qml:95
+#: ../qml/NumericPage.qml:55 ../qml/NumericPage.qml:99
+#: ../qml/NumericPagePhone.qml:55 ../qml/NumericPagePhone.qml:99
+#: ../qml/AreaPagePhone.qml:52 ../qml/AreaPagePhone.qml:95
+#: ../qml/InvalidInputPopUp.qml:20 ../qml/WeigthPagePhone.qml:52
+#: ../qml/WeigthPagePhone.qml:95 ../qml/LengthPagePhone.qml:52
+#: ../qml/LengthPagePhone.qml:95 ../qml/PressurePage.qml:52
+#: ../qml/PressurePage.qml:94 ../qml/VolumePage.qml:52 ../qml/VolumePage.qml:95
+#: ../qml/VolumePagePhone.qml:52 ../qml/VolumePagePhone.qml:94
+#: ../qml/WeigthPage.qml:52 ../qml/WeigthPage.qml:95
+msgid "Close"
+msgstr "Sluiten"
+
+#: ../qml/LengthPage.qml:60 ../qml/LengthPage.qml:103
+#: ../qml/TemperaturePage.qml:60 ../qml/TemperaturePage.qml:103
+#: ../qml/AreaPage.qml:60 ../qml/AreaPage.qml:103
+#: ../qml/PressurePagePhone.qml:60 ../qml/PressurePagePhone.qml:103
+#: ../qml/TemperaturePagePhone.qml:60 ../qml/TemperaturePagePhone.qml:103
+#: ../qml/NumericPage.qml:63 ../qml/NumericPage.qml:107
+#: ../qml/NumericPagePhone.qml:63 ../qml/NumericPagePhone.qml:107
+#: ../qml/AreaPagePhone.qml:60 ../qml/AreaPagePhone.qml:103
+#: ../qml/WeigthPagePhone.qml:60 ../qml/WeigthPagePhone.qml:103
+#: ../qml/LengthPagePhone.qml:60 ../qml/LengthPagePhone.qml:103
+#: ../qml/PressurePage.qml:60 ../qml/PressurePage.qml:102
+#: ../qml/VolumePage.qml:60 ../qml/VolumePage.qml:103
+#: ../qml/VolumePagePhone.qml:60 ../qml/VolumePagePhone.qml:102
+#: ../qml/WeigthPage.qml:60 ../qml/WeigthPage.qml:103
+msgid "Select"
+msgstr "Kiezen"
+
+#: ../qml/LengthPage.qml:137 ../qml/TemperaturePage.qml:137
+#: ../qml/AreaPage.qml:138 ../qml/PressurePagePhone.qml:138
+#: ../qml/TemperaturePagePhone.qml:137 ../qml/NumericPage.qml:142
+#: ../qml/NumericPagePhone.qml:143 ../qml/AreaPagePhone.qml:137
+#: ../qml/WeigthPagePhone.qml:137 ../qml/LengthPagePhone.qml:138
+#: ../qml/PressurePage.qml:137 ../qml/VolumePage.qml:137
+#: ../qml/VolumePagePhone.qml:136 ../qml/WeigthPage.qml:137
+msgid "From:"
+msgstr "Van:"
+
+#: ../qml/LengthPage.qml:151 ../qml/LengthPage.qml:183
+#: ../qml/TemperaturePage.qml:151 ../qml/TemperaturePage.qml:183
+#: ../qml/AreaPage.qml:152 ../qml/AreaPage.qml:184
+#: ../qml/PressurePagePhone.qml:163 ../qml/PressurePagePhone.qml:196
+#: ../qml/TemperaturePagePhone.qml:162 ../qml/TemperaturePagePhone.qml:196
+#: ../qml/NumericPage.qml:156 ../qml/NumericPage.qml:188
+#: ../qml/NumericPagePhone.qml:169 ../qml/NumericPagePhone.qml:202
+#: ../qml/AreaPagePhone.qml:162 ../qml/AreaPagePhone.qml:195
+#: ../qml/WeigthPagePhone.qml:162 ../qml/WeigthPagePhone.qml:195
+#: ../qml/LengthPagePhone.qml:164 ../qml/LengthPagePhone.qml:197
+#: ../qml/PressurePage.qml:151 ../qml/PressurePage.qml:183
+#: ../qml/VolumePage.qml:151 ../qml/VolumePage.qml:183
+#: ../qml/VolumePagePhone.qml:161 ../qml/VolumePagePhone.qml:194
+#: ../qml/WeigthPage.qml:151 ../qml/WeigthPage.qml:183
+msgid "Choose..."
+msgstr "Kiezen..."
+
+#: ../qml/LengthPage.qml:167 ../qml/TemperaturePage.qml:167
+#: ../qml/AreaPage.qml:168 ../qml/PressurePagePhone.qml:187
+#: ../qml/TemperaturePagePhone.qml:187 ../qml/NumericPage.qml:172
+#: ../qml/NumericPagePhone.qml:193 ../qml/AreaPagePhone.qml:186
+#: ../qml/WeigthPagePhone.qml:186 ../qml/LengthPagePhone.qml:188
+#: ../qml/PressurePage.qml:167 ../qml/VolumePage.qml:167
+#: ../qml/VolumePagePhone.qml:185 ../qml/WeigthPage.qml:167
+msgid "To:"
+msgstr "Naar:"
+
+#: ../qml/LengthPage.qml:213 ../qml/TemperaturePage.qml:213
+#: ../qml/AreaPage.qml:214 ../qml/PressurePagePhone.qml:238
+#: ../qml/TemperaturePagePhone.qml:238 ../qml/NumericPage.qml:212
+#: ../qml/NumericPagePhone.qml:225 ../qml/AreaPagePhone.qml:237
+#: ../qml/WeigthPagePhone.qml:237 ../qml/LengthPagePhone.qml:239
+#: ../qml/PressurePage.qml:213 ../qml/VolumePage.qml:213
+#: ../qml/VolumePagePhone.qml:236 ../qml/WeigthPage.qml:213
+msgid "Convert"
+msgstr "Omzetten"
+
+#: ../qml/LengthPage.qml:232 ../qml/TemperaturePage.qml:232
+#: ../qml/AreaPage.qml:233 ../qml/PressurePagePhone.qml:257
+#: ../qml/TemperaturePagePhone.qml:257 ../qml/AreaPagePhone.qml:256
+#: ../qml/WeigthPagePhone.qml:256 ../qml/LengthPagePhone.qml:258
+#: ../qml/PressurePage.qml:232 ../qml/VolumePage.qml:232
+#: ../qml/VolumePagePhone.qml:255 ../qml/WeigthPage.qml:232
+msgid "Note: the decimal separtor in use is '.'"
+msgstr "Let op: de gebruikte decimale scheiding is '.'"
+
+#: ../qml/ProductInfoDialogue.qml:9
+msgid "Product Info"
+msgstr "Productinformatie"
+
+#: ../qml/ProductInfoDialogue.qml:10
+msgid "A simple offline unit of measure converter."
+msgstr "Een eenvoudige offline-app om eenheden om te zetten."
+
+#: ../qml/TemperaturePage.qml:23 ../qml/TemperaturePagePhone.qml:23
+msgid "Temperature conversions"
+msgstr "Temperatuur omzetten"
+
+#: ../qml/TemperaturePage.qml:38 ../qml/TemperaturePage.qml:81
+#: ../qml/TemperaturePagePhone.qml:38 ../qml/TemperaturePagePhone.qml:81
+msgid "temperature units"
+msgstr "temperatuureenheden"
+
+#: ../qml/AreaPage.qml:23 ../qml/AreaPagePhone.qml:23
+msgid "Area conversions"
+msgstr "Oppervlaktemaat omzetten"
+
+#: ../qml/AreaPage.qml:38 ../qml/AreaPage.qml:81 ../qml/AreaPagePhone.qml:38
+#: ../qml/AreaPagePhone.qml:81
+msgid "area units"
+msgstr "oppervlaktematen"
+
+#: ../qml/PressurePagePhone.qml:23 ../qml/PressurePage.qml:23
+msgid "Pressure conversions"
+msgstr "Drukeenheid omzetten"
+
+#: ../qml/PressurePagePhone.qml:38 ../qml/PressurePagePhone.qml:81
+#: ../qml/PressurePage.qml:38 ../qml/PressurePage.qml:80
+msgid "pressure units"
+msgstr "drukeenheden"
+
+#: ../qml/NumericPage.qml:23 ../qml/NumericPagePhone.qml:23
+msgid "Numeric conversions"
+msgstr "Talstelsel omzetten"
+
+#: ../qml/NumericPage.qml:41 ../qml/NumericPage.qml:85
+#: ../qml/NumericPagePhone.qml:41 ../qml/NumericPagePhone.qml:85
+msgid "numeric units"
+msgstr "talstelsels"
+
+#: ../qml/Main.qml:119
+msgid "Invaid Input"
+msgstr "Ongeldige invoer"
+
+#: ../qml/Main.qml:217
+msgid "About"
+msgstr "Over"
+
+#: ../qml/Main.qml:264
+msgid "Length"
+msgstr "Lengte"
+
+#: ../qml/Main.qml:298
+msgid "Area"
+msgstr "Oppervlakte"
+
+#: ../qml/Main.qml:332
+msgid "Volume"
+msgstr "Volume"
+
+#: ../qml/Main.qml:366
+msgid "Weight"
+msgstr "Gewicht"
+
+#: ../qml/Main.qml:401
+msgid "Temperature"
+msgstr "Temperatuur"
+
+#: ../qml/Main.qml:438
+msgid "pressure"
+msgstr "Druk"
+
+#: ../qml/Main.qml:474
+msgid "Numeric"
+msgstr "Talstelsels"
+
+#: ../qml/InvalidInputPopUp.qml:9
+msgid "Operation Result"
+msgstr "Resultaat"
+
+#: ../qml/InvalidInputPopUp.qml:15
+msgid "Attention"
+msgstr "Let op"
+
+#: ../qml/WeigthPagePhone.qml:23 ../qml/WeigthPage.qml:23
+msgid "Weight conversions"
+msgstr "Gewicht omzetten"
+
+#: ../qml/WeigthPagePhone.qml:38 ../qml/WeigthPagePhone.qml:81
+#: ../qml/WeigthPage.qml:38 ../qml/WeigthPage.qml:81
+msgid "weight units"
+msgstr "gewichteenheden"
+
+#: ../qml/VolumePage.qml:23 ../qml/VolumePagePhone.qml:23
+msgid "Volume conversions"
+msgstr "Volume omzetten"
+
+#: ../qml/VolumePage.qml:38 ../qml/VolumePage.qml:81
+#: ../qml/VolumePagePhone.qml:38 ../qml/VolumePagePhone.qml:80
+msgid "volume units"
+msgstr "volume-eenheden"
+
+#: ../qml/js/Utility.js:121
+msgid "<a href=\"%1\">"
+msgstr "<a href=\"%1\">"
+
+#: unitConverter.desktop.in.h:1
+msgid "unitConverter"
+msgstr "Eenheidomzetter"
