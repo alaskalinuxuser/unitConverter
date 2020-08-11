@@ -25,7 +25,7 @@ MainView {
     /* enable to test with dark theme */
     //theme.name: "Ubuntu.Components.Themes.SuruDark"
 
-    property string appVersion : "1.5"
+    property string appVersion : "1.6"
 
     //rel
     width: units.gu(100)
