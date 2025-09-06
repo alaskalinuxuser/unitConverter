@@ -1,6 +1,6 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
 import Qt.labs.settings 1.0
 import QtQuick.LocalStorage 2.0
 
@@ -23,7 +23,7 @@ MainView {
     applicationName: "unitconverter.fulvio"
 
     /* enable to test with dark theme */
-    //theme.name: "Ubuntu.Components.Themes.SuruDark"
+    //theme.name: "Lomiri.Components.Themes.SuruDark"
 
     property string appVersion : "1.6"
 
@@ -245,7 +245,7 @@ MainView {
                     id: hearthMenu
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.red
+                    color: LomiriColors.red
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
@@ -279,7 +279,7 @@ MainView {
                 Rectangle {
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.blue
+                    color: LomiriColors.blue
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
@@ -313,7 +313,7 @@ MainView {
                 Rectangle {
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.green
+                    color: LomiriColors.green
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
@@ -347,7 +347,7 @@ MainView {
                 Rectangle {
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.porcelain
+                    color: LomiriColors.porcelain
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
@@ -382,7 +382,7 @@ MainView {
                 Rectangle {
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.porcelain
+                    color: LomiriColors.porcelain
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;
@@ -418,7 +418,7 @@ MainView {
                     id: settingsMenu;
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.porcelain
+                    color: LomiriColors.porcelain
                     border.color: "black"
 
                     MouseArea {
@@ -455,7 +455,7 @@ MainView {
                     id: numericMenu
                     width: mainPage.rectangle_container_size
                     height: mainPage.rectangle_container_size
-                    color: UbuntuColors.porcelain
+                    color: LomiriColors.porcelain
                     border.color: "black"
                     MouseArea {
                         anchors.fill: parent;

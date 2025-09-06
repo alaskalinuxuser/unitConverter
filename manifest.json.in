@@ -1,7 +1,7 @@
 {
     "name": "unitconverter.fulvio",
     "description": "A simple offline unit of measure converter",
-    "architecture": "@CLICK_ARCH@",
+    "architecture": "all",
     "title": "unitConverter",
     "hooks": {
         "unitConverter": {
@@ -9,7 +9,7 @@
             "desktop": "unitConverter.desktop"
         }
     },
-    "version": "1.6",
+    "version": "1.7",
     "maintainer": "fulvio <fulvio999@gmail.com>",
-    "framework": "ubuntu-sdk-16.04"
+    "framework": "@CLICK_FRAMEWORK@"
 }

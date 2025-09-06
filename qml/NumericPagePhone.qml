@@ -1,8 +1,8 @@
 import QtQuick 2.4
-import Ubuntu.Components 1.3
-import Ubuntu.Components.Popups 1.3
-import Ubuntu.Components.Pickers 1.3
-import Ubuntu.Components.ListItems 1.3 as ListItem
+import Lomiri.Components 1.3
+import Lomiri.Components.Popups 1.3
+import Lomiri.Components.Pickers 1.3
+import Lomiri.Components.ListItems 1.3 as ListItem
 
 import QtQuick.LocalStorage 2.0
 
@@ -164,7 +164,7 @@ Page {
                 id: sourceUnitChooserButton
                 x: valueToConvertField.x
                 width: units.gu(25)
-                color: UbuntuColors.warmGrey
+                color: LomiriColors.warmGrey
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
@@ -197,7 +197,7 @@ Page {
                 id: destinationUnitChooserButton
                 x: sourceUnitChooserButton.x
                 width: units.gu(25)
-                color: UbuntuColors.warmGrey
+                color: LomiriColors.warmGrey
                 iconName: "find"
                 text: i18n.tr("Choose...")
                 onClicked:  {
@@ -221,7 +221,7 @@ Page {
             Button{
                 id: doConvertionButton
                 width: units.gu(25)
-                color: UbuntuColors.green
+                color: LomiriColors.green
                 text: i18n.tr("Convert")
                 onClicked:  {
                     /* Perform conversion */
